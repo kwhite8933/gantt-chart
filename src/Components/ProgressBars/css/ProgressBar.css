@@ -1,0 +1,33 @@
+.progress-bar{
+    position: relative;
+    height: 20px;
+    width: 350px;
+    border-radius: 50px;
+    border: 1px solid #333;
+    background-color: white;
+}
+
+.filler-early{
+    background: green;
+    height: 100%;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.filler-on-time{
+    background: blue;
+    height: 100%;
+    border-radius: 0px;
+    /* transition: width .5s ease-in; */
+}
+
+.filler-late{
+    background: red;
+    height: 100%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+}
