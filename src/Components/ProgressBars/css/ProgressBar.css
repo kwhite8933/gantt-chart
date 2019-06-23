@@ -6,18 +6,18 @@
     border: 1px solid #333;
 }
 
-.progressWrapper{
+.progress-wrapper{
     height: 100%;
     width: 100%;
 }
 
-.percentText{
+.progress-percent-text{
     height: 100%;
     font-size: 10px;
     vertical-align: center;
 }
 
-.filler-early{
+.progress-filler-early{
     float: left;
     background: green;
     height: 100%;
@@ -28,7 +28,7 @@
     overflow: hidden;
 }
 
-.filler-on-time{
+.progress-filler-on-time{
     background: blue;
     float: left;
     height: 100%;
@@ -39,7 +39,7 @@
     /* transition: width .5s ease-in; */
 }
 
-.filler-late{
+.progress-filler-late{
     background: red;
     height: 100%;
     border-top-left-radius: 0px;

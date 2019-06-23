@@ -38,19 +38,19 @@ const ProgressBar = (props) => {
 
 const Filler = (props) => {
     return (
-        <div className="progressWrapper">
-            <div className="filler-early" style={{width: `${props.Early}%`}}>
-                <div className="percentText">
+        <div className="progress-wrapper">
+            <div className="progress-filler-early" style={{width: `${props.Early}%`}}>
+                <div className="progress-percent-text">
                     {`${props.Early}%`}
                 </div>
             </div>
-            <div className="filler-on-time" style={{width: `${props.OnTime}%`}}>
-                <div className="percentText">
+            <div className="progress-filler-on-time" style={{width: `${props.OnTime}%`}}>
+                <div className="progress-percent-text">
                     {`${props.OnTime}%`}
                 </div>
             </div>
-            <div className="filler-late" style={{width: `${props.Late}%`}}>
-                <div className="percentText">
+            <div className="progress-filler-late" style={{width: `${props.Late}%`}}>
+                <div className="progress-percent-text">
                     {`${props.Late}%`}
                 </div>
             </div>
