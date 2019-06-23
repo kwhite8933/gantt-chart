@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ProgressBarExample extends React.Component{
+class ProgressBar extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -13,7 +13,7 @@ class ProgressBarExample extends React.Component{
     render(){
         return(
             <div>
-                <ProgressBar percentEarly={this.state.percentageEarly} percentOnTime={this.state.percentageOnTime} percentLate={this.state.percentageLate}/>
+                <Progress percentEarly={this.state.percentageEarly} percentOnTime={this.state.percentageOnTime} percentLate={this.state.percentageLate}/>
                 <input type="number"></input>
                 <input type="submit" id="tbSubmit" value="Submit" onClick={this.changePercentage}/>
             </div>
@@ -28,7 +28,7 @@ class ProgressBarExample extends React.Component{
 
 }
 
-const ProgressBar = (props) => {
+const Progress = (props) => {
     return (
         <div className="progress-bar">
             <Filler Early={props.percentEarly} OnTime={props.percentOnTime} Late={props.percentLate}/>
@@ -58,4 +58,4 @@ const Filler = (props) => {
     )
 }
 
-export default ProgressBarExample;
+export default ProgressBar;

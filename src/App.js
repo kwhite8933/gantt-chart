@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import '../src/Components/ProgressBars/css/ProgressBar.css'
 import Header from '../src/Components/Header/Header.jsx'
-import ProgressBarExample from '../src/Components/ProgressBars/ProgressBar.jsx'
+import ProgressBar from '../src/Components/ProgressBars/ProgressBar.jsx'
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <ProgressBarExample></ProgressBarExample>
+      <ProgressBar></ProgressBar>
     </div>
   );
 }
