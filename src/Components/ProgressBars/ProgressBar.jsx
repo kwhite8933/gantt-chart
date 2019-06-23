@@ -4,14 +4,16 @@ class ProgressBarExample extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            percentage: 60
+            percentageEarly: 25,
+            percentageOnTime: 32,
+            percentageLate: 43
         };
     }
 
     render(){
         return(
             <div>
-                <ProgressBar percentage={this.state.percentage} />
+                <ProgressBar percentEarly={this.state.percentageEarly} percentOnTime={this.state.percentageOnTime} percentLate={this.state.percentageLate}/>
                 <input type="number"></input>
                 <input type="submit" id="tbSubmit" value="Submit" onClick={this.changePercentage}/>
             </div>
@@ -20,7 +22,7 @@ class ProgressBarExample extends React.Component{
 
     changePercentage = () => {
         this.setState({
-            percentage: 5
+            percentageEarly: 5
         });
     }
 
@@ -29,13 +31,31 @@ class ProgressBarExample extends React.Component{
 const ProgressBar = (props) => {
     return (
         <div className="progress-bar">
-            <Filler percentage={props.percentage}/>
+            <Filler Early={props.percentEarly} OnTime={props.percentOnTime} Late={props.percentLate}/>
         </div>
     )
 }
 
 const Filler = (props) => {
-    return <div className="filler-early" style={{width: `${props.percentage}%`}}/>
+    return (
+        <div className="progressWrapper">
+            <div className="filler-early" style={{width: `${props.Early}%`}}>
+                <div className="percentText">
+                    {`${props.Early}%`}
+                </div>
+            </div>
+            <div className="filler-on-time" style={{width: `${props.OnTime}%`}}>
+                <div className="percentText">
+                    {`${props.OnTime}%`}
+                </div>
+            </div>
+            <div className="filler-late" style={{width: `${props.Late}%`}}>
+                <div className="percentText">
+                    {`${props.Late}%`}
+                </div>
+            </div>
+        </div>
+    )
 }
 
 export default ProgressBarExample;

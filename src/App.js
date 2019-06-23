@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 import '../src/Components/ProgressBars/css/ProgressBar.css'
 import Header from '../src/Components/Header/Header.jsx'
 import ProgressBarExample from '../src/Components/ProgressBars/ProgressBar.jsx'
